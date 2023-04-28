@@ -1,0 +1,3 @@
+EmptyRoom		BoatrideRoom	LeaveRoom
+ZocaloRoom		StartingRoom	TreasureRoom
+TreasureRoom	EmptyRoom		JaguarRoom
