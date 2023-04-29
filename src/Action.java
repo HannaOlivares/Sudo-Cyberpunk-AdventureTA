@@ -2,6 +2,10 @@ public class Action {
     //class variables
     private Method method;
     private char hotkey;
+
+   // public Action(String pickUp, String name) {
+    //}///PickUp option
+
     public char getHotkey(){
         return hotkey;
     }
@@ -16,6 +20,8 @@ public class Action {
     public void setName(String name){
         this.name = name;
     }
+
+
     //
     private Enemy kwargs;
     public Enemy getKwargs() {
@@ -96,12 +102,14 @@ class Jump extends Action{
         this.method = method;
     }
 }
-class Attack extends Action{
+class Attack extends Action {
     private Method method;
-    public Attack(Method method){
-        super(Method.Attack, "Attack with the weapons available in the inventory",'A',null);
+
+    public Attack(Method method) {
+        super(Method.Attack, "Attack with the weapons available in the inventory", 'A', null);
         this.method = method;
     }
 }
+
 
 

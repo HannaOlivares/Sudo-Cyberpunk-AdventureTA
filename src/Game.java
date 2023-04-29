@@ -4,16 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Game {
-    // debug class to find type of variable
-   // public static String printVarType(Object varInQuestion)
- //   {
-      //  return varInQuestion.getClass().getName();
- //   }
     public static void main(String[] args) throws IOException {
         World world = new World();
         world.load_tiles();
-//System.out.println("Enter Player Name:");
-//Scanner input = new Scanner(System.in);
         String playerName= "Sudo a.k.a Hacker Cat";
         Player player = new Player(playerName);
 // //These lines load the starting room and display the text
@@ -41,11 +34,9 @@ public class Game {
                             player.
                                     do_action(action, action.getKwargs(),room);
                             break;
-                            //fix this action for player
                         }
                     }
-                }
-                else{
+                } else{
                     System.out.println("\n \t Game Over!!!");
                     player.writeToFile();
                 }

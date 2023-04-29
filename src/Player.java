@@ -27,11 +27,9 @@ public class Player implements Comparable<Player> {
     public int getScore() {
         return score;
     }
-
     public void setScore(int score) {
         this.score = score;
     }
-
     int plyrGold;
     Integer score;
     Boolean victory;
@@ -39,7 +37,6 @@ public class Player implements Comparable<Player> {
     int prevLocatnX,prevLocatnY;
     ArrayList<Item> inventory = new ArrayList<>();
     ArrayList<Action> actions = new ArrayList<>();
-    //add this
 
     //Constructor method
     public Player(String name){
@@ -50,17 +47,12 @@ public class Player implements Comparable<Player> {
         inventory.add(new Sword());
         inventory.add(new Mace());
         inventory.add(new Arrow());
-       // actions.add(new Flee());
-        //add actions
-       // print_inventory();
-        //print_actions();
-        //add enemies
+
         this.hp = 140; // Health Points
         this.location_x = World.Starting_Position.x;
         this.location_y = World.Starting_Position.y;
         this.victory = false; //no victory on start up
     }
-
     public Player() {
 // TODO Auto-generated constructor stub
     }
@@ -85,7 +77,6 @@ public class Player implements Comparable<Player> {
         plyrGold = totalGold;
         System.out.println(gold.toString());
     }
-
     public void updateGold()
     {
         int totalGold=0;Gold geld=null ;
@@ -190,7 +181,7 @@ public class Player implements Comparable<Player> {
             System.out.printf("%s HP is %d.",enemy.name, enemy.hp);
         }
     }
-    public void do_action(Action action, Enemy kwargs,MapTile mp){
+    public void do_action(Action action, Enemy kwargs, MapTile mp){
         if(kwargs == null)
         {
             if(action instanceof MoveEast)
@@ -217,5 +208,12 @@ public class Player implements Comparable<Player> {
         {
             attackEnemy(kwargs);
         }
+  }
+    public void takeDamage(int damage) {
+    }
+    public void attack(Enemy enemy) {
+    }
+
+    public void addGold(int amt) {
     }
 } //End Code block class

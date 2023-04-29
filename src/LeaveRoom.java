@@ -4,7 +4,7 @@ public class LeaveRoom extends MapTile{
         super(x,y);
     }
 
-    public String into_text() {
+    public String intro_text() {
         return "\n You have left Mexico City.";
     }
 
